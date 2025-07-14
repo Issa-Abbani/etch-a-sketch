@@ -2,6 +2,7 @@ const container = document.querySelector("#container");
 const sizeInput = document.querySelector("#sizeInput");
 const colorInput = document.querySelector("#colorPicker");
 const eraser = document.querySelector(".fa-eraser");
+const brush = document.querySelector(".fa-brush");
 let currentColor = "#000000";
 
 let isDrawing = false;
@@ -77,6 +78,18 @@ sizeInput.addEventListener("keydown", (e) => {
 
 colorInput.addEventListener("input", (e) =>{
    currentColor = colorInput.value;
+});
+
+colorInput.addEventListener("click", () => {
+  currentColor = colorInput.value;
+});
+
+brush.addEventListener("touchstart", () => {
+  currentColor = colorInput.value;
+});
+
+brush.addEventListener("click", () => {
+  currentColor = colorInput.value;
 });
 
 eraser.addEventListener("click", () => {
