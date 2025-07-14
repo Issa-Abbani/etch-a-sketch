@@ -1,4 +1,15 @@
 const container = document.querySelector("#container");
+const sizeInput = document.querySelector("#sizeInput");
+const colorInput = document.querySelector("#colorPicker");
+let currentColor = "#000000";
+
+let isDrawing = false;
+document.addEventListener("mousedown", () => isDrawing = true);
+document.addEventListener("mouseup", () => isDrawing = false);
+
+
+let gridInput = parseInt(sizeInput.value);
+createGrid(gridInput);
 
 function createGrid(gridSize){
     container.innerHTML = ""; 
@@ -12,8 +23,32 @@ function createGrid(gridSize){
     for(let i = 0; i <totalCells ; i++){
       const cell = document.createElement("div");
       cell.classList.add("cell");
+
+      cell.addEventListener("mouseover", () => {
+          if (isDrawing) {
+            cell.style.backgroundColor = currentColor;
+            }
+      });
+
+
+
       container.appendChild(cell);
     }
 }
 
-createGrid(16);
+sizeInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    gridInput = parseInt(sizeInput.value);
+
+    if (!isNaN(gridInput) && gridInput > 0 && gridInput <= 150) {
+      createGrid(gridInput);
+    } else {
+      alert("Please enter a valid positive number that does not exceed 150.");
+    }
+  }
+});
+
+colorInput.addEventListener("input", (e) =>{
+   currentColor = colorInput.value;
+});
+
