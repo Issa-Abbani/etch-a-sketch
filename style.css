@@ -1,0 +1,11 @@
+#container {
+  width: 400px;
+  height: 400px;
+  gap: 1px;
+  margin: 0 auto;
+}
+
+.cell {
+  background-color: lightgray;
+  border: 1px solid #999;
+}
