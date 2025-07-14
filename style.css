@@ -1,11 +1,83 @@
+:root {
+  --header-bg: #1e293b;   
+  --header-text: #f1f5f9; 
+  --accent: #0ea5e9;      
+  --body-bg: #f8fafc;     
+  --text: #1e293b;        
+}
+
+
+body{
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: var(--body-bg);
+  color: var(--text);
+}
+
+header{
+  background-color: var(--header-bg);
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+header > h1{
+  color: var(--header-text);
+}
+
+header > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > div > span {
+  font-size: 1.2rem;
+  color: var(--header-text)
+}
+
+#sizeInput{
+  background-color: var(--accent);
+  color: var(--header-text);
+  font-size: 1.6rem;
+  scale: 0.8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#colorPicker{
+  background-color: var(--header-bg);
+  margin: 2vw;
+  transition: 0.3s;
+  cursor: pointer;
+}
+#sizeInput:hover{
+  scale: 0.9;
+  box-shadow: 0 0 2rem var(--accent);
+}
+
+#colorPicker:hover {
+  scale: 1.1;
+  box-shadow: 0 0 2rem var(--accent);
+}
+
+h1{
+  font-size: 2rem;
+}
 #container {
   width: 400px;
   height: 400px;
-  gap: 1px;
+  gap: 0px;
   margin: 0 auto;
 }
 
 .cell {
   background-color: lightgray;
   border: 1px solid #999;
+  margin: 0;
 }
