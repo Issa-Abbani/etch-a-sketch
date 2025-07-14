@@ -31,6 +31,10 @@ function createGrid(gridSize){
             }
       });
 
+      cell.addEventListener("click", () => {
+          cell.style.backgroundColor = currentColor;
+      });
+
 
 
       container.appendChild(cell);
