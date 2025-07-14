@@ -96,3 +96,113 @@ h1{
   border: 1px solid #999;
   margin: 0;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) and (orientation: portrait) {
+  #container {
+    width: 500px;
+    height: 500px;
+  }
+
+  .controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  input[type="number"],
+  input[type="color"],
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  header > div > span {
+    display: none;
+  }
+  #colorPicker{
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #container {
+    width: 400px;
+    height: 400px;
+  }
+
+  input[type="number"],
+  input[type="color"],
+  button {
+    font-size: 0.8rem;
+  }
+
+    #colorPicker{
+    width: 2rem;
+  }
+
+  #sizeInput{
+    width: 3rem;
+  }
+}
+
+/* For portrait phones */
+@media (max-width: 480px) and (orientation: portrait) {
+  h1{
+    font-size: 1rem;
+  }
+  #container {
+    width: 90vw;
+    height: 90vw;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type="number"],
+  input[type="color"],
+  button {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  header > div > span {
+    display: none;
+  }
+
+  #colorPicker{
+    width: 2rem;
+  }
+
+  #sizeInput{
+    width: 3rem;
+  }
+}
+
+/* For landscape phones */
+@media (max-height: 480px) and (orientation: landscape) {
+  #container {
+    width: 60vh;
+    height: 60vh;
+  }
+
+  .controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  input[type="number"],
+  input[type="color"],
+  button {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+
+  header > div > span {
+    display: none;
+  }
+}
