@@ -36,6 +36,28 @@ function createGrid(gridSize){
       });
 
 
+      cell.addEventListener("touchstart", (e) => {
+        e.preventDefault();
+        isDrawing = true;
+        cell.style.backgroundColor = currentColor;
+      }, { passive: false });
+
+
+      cell.addEventListener("touchmove", (e) => {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const target = document.elementFromPoint(touch.clientX, touch.clientY);
+        if (target && target.classList.contains("cell") && isDrawing) {
+          target.style.backgroundColor = currentColor;
+        }
+      }, { passive: false });
+
+
+      cell.addEventListener("touchend", () => {
+        isDrawing = false;
+      });
+
+
 
       container.appendChild(cell);
     }
