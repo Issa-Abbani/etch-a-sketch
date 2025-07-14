@@ -1,6 +1,7 @@
 const container = document.querySelector("#container");
 const sizeInput = document.querySelector("#sizeInput");
 const colorInput = document.querySelector("#colorPicker");
+const eraser = document.querySelector(".fa-eraser");
 let currentColor = "#000000";
 
 let isDrawing = false;
@@ -50,5 +51,9 @@ sizeInput.addEventListener("keydown", (e) => {
 
 colorInput.addEventListener("input", (e) =>{
    currentColor = colorInput.value;
+});
+
+eraser.addEventListener("click", () => {
+  currentColor = "#d3d3d3";
 });
 
