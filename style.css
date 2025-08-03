@@ -90,11 +90,12 @@ h1{
   height: 400px;
   gap: 0px;
   margin: 0 auto;
+  border: 1px solid black;
 }
 
 .cell {
-  background-color: #d3d3d3;
-  border: 1px solid #999;
+  background-color: white;
+  border: none;
   margin: 0;
 }
 

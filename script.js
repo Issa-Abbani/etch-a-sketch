@@ -93,6 +93,6 @@ brush.addEventListener("click", () => {
 });
 
 eraser.addEventListener("click", () => {
-  currentColor = "#d3d3d3";
+  currentColor = "#ffffffff";
 });
 
